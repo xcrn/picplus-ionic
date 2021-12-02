@@ -1,0 +1,7 @@
+{
+  "name": "Pic+",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
