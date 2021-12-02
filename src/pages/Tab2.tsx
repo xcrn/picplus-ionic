@@ -1,24 +1,40 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
+import ProfileCard from '../components/profileCard'
 
 const Tab2: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
-        </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+      <div>
+      <div className="body-container">
+        <div className="header">
+          <p>Encontre o seu fotógrafo favorito</p>
+          {/* <div className="search-icon"></div> */}
+          <div className="location">
+            <span>Onde você está?</span>
+            <div className="location-icon"></div>
+          </div>
+          <div className="card-photogr">
+            <div>
+              <div className="photo-photogr"></div>
+            </div>
+            <div>
+              <p>Nome fotógrafo</p>
+              <div className="evaluations"></div>
+              <button className="toProfile" onClick={ProfileCard}> Ver Perfil</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <ExploreContainer name="Tab 1 page" />
       </IonContent>
     </IonPage>
+    
   );
 };
 
